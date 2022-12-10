@@ -1,0 +1,120 @@
+.section-team {
+  background: $background-color-third;
+}
+
+.team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.team__item {
+  width: 450px;
+  // height: 622px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: $background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-left: 0;
+
+    &:nth-child(2n) {
+      @media screen and (max-width: 1199px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+
+.team__image {
+  margin-bottom: 30px;
+}
+
+.team__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+
+  color: $title-text-color;
+}
+
+.team__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+
+.team-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.team-icons__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  border-radius: 50%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team-icons__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.team-icons__image {
+  fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .team-icons__link:hover &,
+  .team-icons__link:focus & {
+    fill: #ffffff;
+  }
+}

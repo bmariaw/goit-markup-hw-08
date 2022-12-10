@@ -1,0 +1,253 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.main-header {
+  @media screen and (max-width: 767px) {
+    width: 480px;
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    display: block;
+    padding: 32px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: $title-text-color;
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.site-nav__link--current {
+  color: $accent-color;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  fill: $title-text-color;
+  background-color: $background-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: $background-color;
+  display: none;
+
+  &.is-open {
+    display: block;
+    opacity: 9999;
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+  }
+}
+
+.mobile-menu-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__icon {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+
+  color: $title-text-color;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-menu__icon--current {
+  color: $accent-color;
+}
+
+.mobile-menu-contact {
+  margin-bottom: 64px;
+  margin-top: 302px;
+}
+
+.mobile-menu-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-contact__tel {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+
+.mobile-menu-contact__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $primary-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-menu-social {
+  display: flex;
+  margin-bottom: auto;
+}
+
+.mobile-menu-social__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: $accent-color;
+}
+
+.mobile-menu-social__decoration {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+}
+
+.contact-header__mail,
+.contact-header__tel {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: $primary-text-color;
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.contact-header__tel {
+  @media screen and (max-width: 1199px) {
+    margin-top: 10px;
+  }
+}
+
+.contact-header {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.contact-header__item {
+  margin-left: 50px;
+}
+
+.contact-header__icon {
+  margin-right: 10px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: $primary-text-color;
+
+  .contact-header__mail:hover &,
+  .contact-header__mail:focus &,
+  .contact-header__tel:hover &,
+  .contact-header__tel:focus & {
+    fill: $accent-color;
+  }
+}
